@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Films.css';
 import FilmsList from '../../components/Films/FilmsList';
 import { fetchFilms } from '../../services/films';
 
@@ -13,9 +14,11 @@ export default function Films() {
     fetchData();
   }, []);
   return (
-    <div>
+    <>
       <h1>Films</h1>
-      <FilmsList films={films} />
-    </div>
+      <div className="film-list">
+        <FilmsList films={films} />
+      </div>
+    </>
   );
 }
