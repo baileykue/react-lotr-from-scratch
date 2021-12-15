@@ -10,11 +10,11 @@ export default function Characters() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchCharacters();
+      const data = await fetchCharacters(race, query);
       setCharacters(data);
     };
     fetchData();
-  }, []);
+  }, [race, query]);
 
   const handleClick = async () => {
     const data = await fetchCharacters(race, query);
