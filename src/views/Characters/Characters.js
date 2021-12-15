@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Characters.css';
 import CharactersList from '../../components/Characters/CharactersList';
 import Controls from '../../components/Controls/Controls';
 import { fetchCharacters } from '../../services/characters';
@@ -22,7 +23,7 @@ export default function Characters() {
   };
 
   return (
-    <div>
+    <>
       <h1>Characters</h1>
       <Controls
         query={query}
@@ -31,7 +32,9 @@ export default function Characters() {
         setRace={setRace}
         handleClick={handleClick}
       />
-      <CharactersList characters={characters} />
-    </div>
+      <div className="character-list">
+        <CharactersList characters={characters} />
+      </div>
+    </>
   );
 }

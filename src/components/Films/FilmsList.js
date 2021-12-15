@@ -7,6 +7,7 @@ export default function FilmsList({ films }) {
       {films.map((film) => (
         <div key={film.id} className="film-card">
           <img
+            className="film"
             src={`${process.env.PUBLIC_URL}/films/${film.title
               .toLowerCase()
               .split(' ')
