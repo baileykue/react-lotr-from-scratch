@@ -20,6 +20,7 @@ export default function Characters() {
   const handleClick = async () => {
     const data = await fetchCharacters(race, query);
     setCharacters(data);
+    setQuery('');
   };
 
   return (
