@@ -7,7 +7,6 @@ export async function fetchCharacters(race, query = '') {
     urlParams.set('name', `ilike.%${query}%`);
   }
   urlParams.set('select', '*');
-
   const resp = await fetch(
     `${process.env.REACT_APP_SUPABASE_URL}/rest/v1/characters?${urlParams.toString()}`,
     {

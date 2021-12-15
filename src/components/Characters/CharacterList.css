@@ -1,0 +1,10 @@
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character {
+  height: 200px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.755);
+}
