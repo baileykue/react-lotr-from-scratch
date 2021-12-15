@@ -2,8 +2,12 @@ import React from 'react';
 
 export default function BooksList({ books }) {
   return (
-    <div>
-      <p>this is the books list {books}</p>
-    </div>
+    <>
+      {books.map((book) => (
+        <div key={book.id}>
+          <h1>{book.title}</h1>
+        </div>
+      ))}
+    </>
   );
 }

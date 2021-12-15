@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CharacterList from '../../components/Characters/CharactersList';
+import CharactersList from '../../components/Characters/CharactersList';
 import { fetchCharacters } from '../../services/characters';
 
 export default function Characters() {
@@ -16,7 +16,7 @@ export default function Characters() {
   return (
     <div>
       <h1>Characters</h1>
-      <CharacterList key={characters.id} characters={characters} />
+      <CharactersList characters={characters} />
     </div>
   );
 }
