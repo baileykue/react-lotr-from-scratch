@@ -1,8 +1,9 @@
 import React from 'react';
+import './Controls.css';
 
 export default function Controls({ query, setQuery, race, setRace, handleClick }) {
   return (
-    <div>
+    <div className="controls">
       <input
         type="text"
         placeholder="Search For Character"

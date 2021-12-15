@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Book.css';
 import BooksList from '../../components/Books/BooksList';
 import { fetchBooks } from '../../services/books';
 
@@ -14,9 +15,11 @@ export default function Books() {
   }, []);
 
   return (
-    <div>
+    <>
       <h1>Books</h1>
-      <BooksList books={books} />
-    </div>
+      <div className="book-list">
+        <BooksList books={books} />
+      </div>
+    </>
   );
 }
