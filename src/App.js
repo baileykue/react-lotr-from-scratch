@@ -1,5 +1,8 @@
-import './App.css';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+
+import './App.css';
+import background from './background.jpg';
+
 import Films from './views/Films/Films';
 import Main from './views/Main/Main';
 import Books from './views/Books/Books';
@@ -7,7 +10,7 @@ import Characters from './views/Characters/Characters';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `URL(${background})` }}>
       <BrowserRouter>
         <header className="nav">
           <NavLink exact to="/" data-testid="home-link">
