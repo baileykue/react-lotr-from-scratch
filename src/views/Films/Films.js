@@ -12,7 +12,6 @@ export default function Films() {
     };
     fetchData();
   }, []);
-
   return (
     <div>
       <h1>Films</h1>

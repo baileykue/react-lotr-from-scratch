@@ -2,8 +2,12 @@ import React from 'react';
 
 export default function FilmsList({ films }) {
   return (
-    <div>
-      <p>this is the films list{films}</p>
-    </div>
+    <>
+      {films.map((film) => (
+        <div key={film.id}>
+          <h1>{film.title}</h1>
+        </div>
+      ))}
+    </>
   );
 }
