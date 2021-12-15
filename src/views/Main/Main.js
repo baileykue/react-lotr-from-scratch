@@ -6,7 +6,7 @@ export default function Main() {
     <div>
       <h1>Welcome to my LOTR app</h1>
       <p>Navigate to each page to find more info on books, characters, and films.</p>
-      <img src={house} style={'width: 1500px'} />
+      <img src={house} />
     </div>
   );
 }
