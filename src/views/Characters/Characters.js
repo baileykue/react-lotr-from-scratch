@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CharactersList from '../../components/Characters/CharactersList';
+import Controls from '../../components/Controls/Controls';
 import { fetchCharacters } from '../../services/characters';
 
 export default function Characters() {
@@ -15,20 +16,21 @@ export default function Characters() {
     fetchData();
   }, []);
 
+  const handleClick = async () => {
+    const data = await fetchCharacters(race, query);
+    setCharacters(data);
+  };
+
   return (
     <div>
       <h1>Characters</h1>
-      <input></input>
-      <select>
-        <option value="All">All</option>
-        <option value="Dwarf">Dwarf</option>
-        <option value="Elf">Elf</option>
-        <option value="Hobbit">Hobbit</option>
-        <option value="Human">Human</option>
-        <option value="Maiar">Maiar</option>
-        <option value="Orc">Orc</option>
-      </select>
-      <button>Search</button>
+      <Controls
+        query={query}
+        setQuery={setQuery}
+        race={race}
+        setRace={setRace}
+        handleClick={handleClick}
+      />
       <CharactersList characters={characters} />
     </div>
   );
