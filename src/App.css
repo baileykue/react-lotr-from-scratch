@@ -1,0 +1,11 @@
+* {
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 15px;
+  justify-content: center;
+}
