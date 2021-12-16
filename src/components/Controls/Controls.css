@@ -1,0 +1,18 @@
+.controls {
+  margin: 25px;
+}
+
+input,
+button,
+select {
+  background-color: transparent;
+  border-radius: 15px;
+  text-align: center;
+  margin-left: 25px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+}
